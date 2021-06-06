@@ -1,0 +1,152 @@
+// Mobile Menu
+#mobile-menu{
+	background-color: $colorWhite;
+	bottom: 0;
+	height: 100%;
+	left: -300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: fixed;
+	top: 0;
+	@include transition(0.3s);
+	width: 300px;
+	z-index: 9;
+	&.active{
+		box-shadow: 0 0 35px rgba(0,0,0,0.5);
+		left: 0;
+	}
+	.mobile{
+		height: 100%;
+		position: relative;
+		ul{
+			margin: 0;
+			padding: 0;
+			li{
+				border-bottom: 1px solid $colorBorder;
+				list-style-type: none;
+				padding: 0;
+				a{
+					color: $colorMain;
+					display: block;
+					font-family: $opensans;
+					font-size: 12px;
+					padding-bottom: 10px;
+					padding-left: 15px;
+					padding-right: 15px;
+					padding-top: 10px;
+					position: relative;
+					&:hover,
+					&:focus{
+						background-color: $colorMain;
+						color: $colorWhite;
+					}
+				}
+        // Has Children
+				&.menu-item-has-children{
+					& > a{
+						padding-right: 45px;
+						&::after{
+							align-items: center;
+							border-left: 1px solid $colorBorder;
+							content: '\f105';
+							display: flex;
+							font-family: $fontawesome;
+							font-weight: 300;
+							font-size: 16px;
+							height: 100%;
+							position: absolute;
+							right: 0;
+							top: 0;
+							justify-content: center;
+							width: 30px;
+						}
+					}
+				}
+				// Sub Menu
+				.sub-menu{
+					background-color: $colorWhite;
+					bottom: 0;
+					height: 100%;
+					left: -300px;
+					position: absolute;
+					right: 0;
+					top: 0;
+					@include transition(0.3s);
+					width: 100%;
+					z-index: 2;
+					&.active{
+						left: 0;
+					}
+					.bck-menu{
+						color: $colorMain;
+						cursor: pointer;
+						display: block;
+						font-family: $opensans;
+						font-size: 12px;
+						padding-bottom: 10px;
+						padding-left: 30px;
+						padding-right: 15px;
+						padding-top: 10px;
+						position: relative;
+						&:hover,
+						&:focus{
+							background-color: $colorMain;
+							color: $colorWhite;
+						}
+						.text{
+							display: block;
+							padding-left: 15px;
+						}
+						i{
+							align-items: center;
+							border-right: 1px solid $colorBorder;
+							display: flex;
+							font-size: 16px;
+							height: 100%;
+							left: 0;
+							position: absolute;
+							top: 0;
+							justify-content: center;
+							width: 30px;
+						}
+					}
+				}
+
+				// Active State
+				&.current-menu-item,
+				&.current_page_item,
+        &.current-menu-ancestor,
+        &.current-menu-parent,
+        &.current-page-ancestor,
+        &.current-menu-parent{
+        	& > a{
+        		background-color: $colorMain;
+						color: $colorWhite;
+        	}
+        }
+			}
+		}
+	}
+}
+
+// Backdrop
+#aside-backdrop{
+	background-color: rgba(0,0,0,0.7);
+	bottom: 0;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	@include transition(0.5s);
+	visibility: hidden;
+	width: 100%;
+	z-index: 8;
+	&.active{
+		opacity: 1;
+		pointer-events: auto;
+		visibility: visible;
+	}
+}

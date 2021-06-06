@@ -1,0 +1,23 @@
+button, input[type="submit"]{
+	cursor: pointer;
+	outline: 0;
+	@include transition(0.3s);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+	color: $colorBlack;
+	font-family: $opensans;
+	@include fluid(font-size, 14px, 16px);
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: $colorBlack;
+	font-family: $opensans;
+	@include fluid(font-size, 14px, 16px);
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+	color: $colorBlack;
+	font-family: $opensans;
+	@include fluid(font-size, 14px, 16px);
+}

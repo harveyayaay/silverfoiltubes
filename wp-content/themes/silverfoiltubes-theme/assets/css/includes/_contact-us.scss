@@ -1,0 +1,44 @@
+#contact-us{
+  height: 327px;
+  width: 100%;
+  .container-fluid{
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    .content{
+      text-align: center;
+      .title{
+        color: #fff;
+        font-family: $trueno;
+        font-size: 24px;
+        font-weight: 300;
+        span{
+          color: $primaryColor;
+        }
+      }
+      .address{
+        margin-top: 26px;
+        color: #fff;
+        font-family: $trueno;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      .email-address{
+        margin-top: 22px;
+        color: #fff;
+        font-family: $trueno;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      .contact-number{
+        margin-top: 22px;
+        color: #fff;
+        font-family: $trueno;
+        font-weight: 300;
+  
+      }
+    }
+  }
+}

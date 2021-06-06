@@ -1,0 +1,23 @@
+#footer{
+  background-color: #f7f7f7;
+  .custom-width-footer{
+    width: calc(100% - 100px);
+    .content{
+      display: flex;
+      justify-content: space-between;
+      padding: 11px 30px;
+      .copyright{
+        color: #242424;
+        font-family: $trueno;
+        font-size: 12px;
+        font-weight: 200;
+      }
+      .powered-by{
+        color: #242424;
+        font-family: $trueno;
+        font-size: 12px;
+        font-weight: 200;
+      }
+    }
+  }
+}

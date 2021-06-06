@@ -1,0 +1,87 @@
+.hp-carousel{
+  // min-height: 100vh;
+  .carousel-item{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 465px;
+    .contents{
+      position: absolute;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 1;
+      .title{
+        color: #fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 33px;
+        text-align: center;
+        @include bp(sm){
+          font-size: 35px;
+          text-align: center;
+        }
+        @include bp(md){
+          font-size: 38px;
+        }
+        @include bp(lg){
+          font-size: 42px;
+          text-align: start;
+        }
+        @include bp(xl){
+          font-size: 45px;
+        }
+      }
+      .sub-title{
+        color: #d3d3d3;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 23px;
+        font-weight: normal;
+        line-height: 30px;
+        margin-top: 13px;
+        text-align: center;
+        @include bp(sm){
+          font-size: 30px;
+          line-height: 33px;
+        }
+        @include bp(md){
+          font-size: 32px;
+          line-height: 35px;
+        }
+        @include bp(lg){
+          font-size: 34px;
+          line-height: 37px;
+          text-align: start;
+        }
+        p{
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+  .carousel-indicator{
+    padding-top: 450px;
+    margin: 0px;
+    .carousel-indicators{
+      justify-content: center;
+      margin: 0px 20px;
+      margin-bottom: 69px;
+      @include bp(lg){
+        justify-content: flex-start;
+      }
+      li{
+        border-radius: 50%;
+        height: 9px;
+        width: 9px;
+        &:not(:last-child) {
+          margin-right: 12px;
+        }
+      }
+      .active{
+        background-color: #8cd8f9;
+      }
+    }
+  }
+}

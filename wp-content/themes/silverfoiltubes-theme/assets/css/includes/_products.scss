@@ -1,0 +1,85 @@
+#hp-products{
+  display: flex;
+  justify-content: center;
+  .custom-width-products{
+    display: flex;
+    width: calc(100% - 100px);
+    .content{
+      padding: 0px 30px;
+      .title{
+        p{
+          color: #242424;
+          font-family: $trueno;
+          font-size: 24px;
+          font-weight: 300;
+          margin: 0px;
+          span{
+            color: $primaryColor;
+          }
+        }
+      }
+      .description{
+        margin-top: 25px;
+        p{
+          color: #242424;
+          font-family: $trueno;
+          font-size: 14px;
+          font-weight: 200;
+          line-height: 24px;
+          margin: 0px;
+          span{
+            color: $primaryColor;
+            font-weight: 600;
+          }
+        }
+      }
+      .items{
+        margin-top: 30px;
+        .item-container{
+          padding: 0px 30px 30px 0px;
+          &:nth-child(2n){
+            padding-right: 0px;
+          }
+          .item{
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 298px;
+            .content{
+              background-color: rgba(0, 0, 0, 0.9);
+              align-items: center;
+              display: flex;
+              height: 100%;
+              &.active{
+                background-color: transparent;
+              }
+              .item-text{
+                .item-title{
+                  p{
+                    color: $primaryColor;
+                    font-family: $trueno;
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 36px;
+                    margin: 0px;
+                  }
+                }
+                .item-description{
+                  margin-top: 25px;
+                  p{
+                    color: #fff;
+                    font-family: $trueno;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 36px;
+                    margin: 0px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

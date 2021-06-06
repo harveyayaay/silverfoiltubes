@@ -1,0 +1,3 @@
+@mixin custom-width($subtrahend){
+  width: calc(100% - $subtrahend);
+}

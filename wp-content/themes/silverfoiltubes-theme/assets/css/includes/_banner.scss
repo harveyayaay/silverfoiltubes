@@ -1,0 +1,92 @@
+.banner{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	overflow: hidden;
+	position: relative;
+	@include fluid(height, 200px, 265px);
+	&::after{
+		bottom: 0;
+		background-color: rgba(0,0,0,0.7);
+		content: '';
+		height: 100%;
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 1;
+	}
+	&.full-page{
+		height: 100vh;
+	}
+	.heading{
+		color: $colorWhite;
+		font-family: $opensans;
+		font-weight: 700;
+		@include fluid(font-size, 32px, 42px);
+		margin-bottom: 0;
+		text-transform: uppercase;
+	}
+	.banner-wrap{
+		left: 0;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 50%;
+		z-index: 2;
+		@include translate(y, -50%);
+	}
+	.title{
+		left: 0;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 50%;
+		z-index: 2;
+		@include translate(y, -50%);
+		@include bp(xl){
+			text-align: left;
+		}
+	}
+	.video{
+		left: 0;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 50%;
+		@include translate(y, -50%);
+		iframe{
+			border: none;
+			height: 100vh;
+			outline: 0;
+			width: 100%;
+		}
+		video{
+			border: none;
+			height: 100vh;
+			outline: 0;
+			width: 100%;
+		}
+	}
+	.bread-crumbs{
+		margin-top: 10px;
+		#breadcrumbs{
+			line-height: 1;
+			margin-bottom: 0;
+			.separator{
+				color: $colorWhite;
+				margin: 0 15px;
+			}
+			a{
+				color: $colorWhite;
+				&:hover{
+					color: $colorMain;
+				}
+			}
+			.breadcrumb_last{
+				color: $colorMain;
+			}
+		}
+	}
+}
